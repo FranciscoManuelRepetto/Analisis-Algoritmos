@@ -67,6 +67,18 @@ de intentos que puede necesitar el jugador hasta encontrar un numero dentro del 
 
 La forma mas optima es divir al numero en 2 y dependiendo de la respuesta, dividir por 2. Por ejemplo: 1.000.000 preguntas si n es 500.000 si es menor entonces preguntas 250.000. Por lo tanto, el maximo numero de intentos que puede necesitar el jugador hasta encontrar un numero es de 20 pasos
 
+6. Liste y describa claramente los algoritmos para la resolucion del problema de busqueda que conoce. (tip: recordar distintas implementaciones de interfaz TablaDeBusqueda).
+
+Búsqueda Secuencial: La búsqueda secuencial es un método de búsqueda en el que se recorre un conjunto de elementos uno por uno para encontrar un valor específico. 
+Búsqueda Binaria: La búsqueda binaria es un algoritmo de búsqueda más eficiente que solo se puede aplicar en listas ordenadas. Funciona dividiendo repetidamente la lista en mitades y comparando el elemento buscado con el elemento en el medio. Aquí está el proceso general de búsqueda binaria
+
+PARA GRAFOS (TAMBIEN APLICABLES PARA ARBOLES)
+Búsqueda en Anchura : es un algoritmo de búsqueda que explora un grafo en capas. Comienza desde un nodo inicial y explora todos los nodos vecinos antes de avanzar a los nodos en la siguiente capa. 
+Búsqueda en Profundidad: algoritmo de búsqueda que explora un grafo tan profundamente como sea posible antes de retroceder. Comienza desde un nodo inicial y sigue un camino hasta llegar a un nodo sin nodos vecinos sin explorar, momento en el cual retrocede y explora otros caminos no explorados
+
+TABLA DE BUSQUEDA CON HASH
+Como ya se ha visto, la Tabla Hash tiene una eficiencia en las operaciones de búsqueda, inserción y eliminación de orden constante, O(1), cuando se cuenta con una función hash adecuada para el tipo de datos que se almacena como clave. Luego, se deberá modicar la estructura de Tabla Hash de manera adecuada para permitir almacenar la información adicional de cada clave
+
 Ejercicio7: Al ordenar una lista de numeros enteros aplicando el algoritmo quicksort, como pivote se elige el primer elemento de la lista. ¿que pasarıa si se selecciona otro pivote?
 
 Al seleccionar diferentes elementos como pivote en el algoritmo de ordenamiento QuickSort, se pueden tener resultados variados en términos de eficiencia y número de operaciones realizadas. La elección del pivote afecta el rendimiento del algoritmo, ya que determina cómo se divide la lista en subconjuntos y cuántas comparaciones y movimientos se requieren.
