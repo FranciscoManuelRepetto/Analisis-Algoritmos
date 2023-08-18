@@ -88,18 +88,64 @@ Si seleccionas el primer elemento de la lista como pivote en QuickSort, es posib
 Ejercicio8: Resolver el siguiente problema escolar. Dadas las notas de los alumnos de un colegio en el primer curso de bachillerato, en las diferentes asignaturas (5 por comodidad) se desea:
 
 a) Calcular la media de cada alumno.
-media alumno= (nota1+not2+nota3+nota4+nota5)/5
+	media alumno= (nota1+not2+nota3+nota4+nota5)/5
 
 b)  Calcular la media de cada asignatura.
-mediaAsignatura= (notaAlumnoAsignatura1+notaAlumnoAsignatura2+notaAlumnoAsignatura3+...+notaAlumnoAsignaturaN)/cantAlumnos 
+	mediaAsignatura= (notaAlumnoAsignatura1+notaAlumnoAsignatura2+notaAlumnoAsignatura3+...+notaAlumnoAsignaturaN)/cantAlumnos 
 
 c) Calcular la media total de la clase
-mediaClase= (mediaAlumno1+mediaAlumno2+...+mediaAlumnoN) /cantAlumnos
+	mediaClase= (mediaAlumno1+mediaAlumno2+...+mediaAlumnoN) /cantAlumnos
 
 d) Ordenar el listado de los alumnos por orden decreciente de notas medias individuales,
 que incluyen todas las materias.
 Nota: Utilizar dos algoritmos de ordenacion diferentes para resolver el problema, justificando la eleccion. Generar los casos de prueba antes de hacer el ejercicio.
-VER
+
+(No entiendo si hay que programarlo)
+Metodos de ordenamiento elegidos: 
+	- Burbuja Mejorado
+	- Inserccion
+
+Consideramos que la cantidad de alumnos de primer curso de un bachillerato no es una gran cantidad de datos, por lo tanto podemos utilizar los metodos de ordenamiento basicos que conocemos.
+Hemos elegido optar tambien por el burbuja mejorado dado que corta la ejecucion una vez que el arreglo ya esta ordenado.
+
+A continuacion procedo a insertar el codigo de Burbuja Mejorado y de Inserccion:
+
+						-------burbuja mejorado-------
+  public static void burbujaMejorado (int []a){
+       int i=0,j,temp;
+       boolean intercambio=true;
+           while (intercambio&&i<a.length-1){
+               intercambio=false;
+              for (j=0;j<a.length-1-i;j++){
+                  mostrarArreglo(a);
+                  if (a[j+1]>a[j]){
+                      temp=a[j];
+                      a[j]=a[j+1];
+                      a[j+1]=temp;
+                      intercambio=true;
+                  }
+              }       
+           i++;
+           }
+   }
+
+						-------inserccion--------
+ public static void inserccion(int[] arreglo) {
+        int p, temp, j;
+        for (p = 1; p < arreglo.length; p++) {
+            temp = arreglo[p];
+            j = p;
+            while (j > 0 && temp < arreglo[j - 1]) {
+                arreglo[j] = arreglo[j - 1];
+                j = j - 1;
+            }
+            arreglo[j] = temp;
+            mostrarArreglo(arreglo);
+        }
+    }
+
+
+
 
 9. Se leen dos listas de numeros enteros,  A y B de 100 y 60 elementos, respectivamente. Se desea resolver mediante procedimientos las siguientes tareas:
 a) Ordenar aplicando un metodo de ordenacion distinto a cada una de las listas A y B
