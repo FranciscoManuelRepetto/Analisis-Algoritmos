@@ -3,15 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package punto4;
+package Tp0;
 
 import java.util.Scanner;
 
 /**
  *
- * @author male_
+ *PUNTO 4
+ * Realizar un juego para adivinar un numero: Generar un n ´ umero entero en forma aleatoria ´
+dentro de un rango, y luego, ir pidiendo numeros indicando ´ mayor o menor segun sea mayor ´
+o menor con respecto a n. El proceso termina cuando el usuario acierta.
  */
-public class punto4 {
+public class Punto4 {
     public static void main(String[] args) {
        int numeroRandom= (int)(1 + (Math.random() * (100-1)));
         Scanner sc= new Scanner(System.in);

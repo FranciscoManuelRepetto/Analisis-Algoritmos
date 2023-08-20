@@ -8,7 +8,9 @@ import utiles.TecladoIn;
 
 /**
  *
- * @author Usuario
+ * PUNTO 3
+ * Realizar un programa que nos pida un numero n y nos diga cuantos numeros primos existen 
+entre 1 y n.
  */
 public class Punto3 {
     public static void main(String[] args) {

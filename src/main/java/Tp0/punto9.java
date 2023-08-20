@@ -1,4 +1,4 @@
-package ejemplos_InOut;
+package Tp0;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,9 +11,14 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author Usuario
+ * PUNTO 9
+ * Se leen dos listas de numeros enteros, A y B de 100 y 60 elementos, respectivamente. Se
+desea resolver mediante procedimientos las siguientes tareas:
+    a) Ordenar aplicando un metodo de ordenaci ´ on distinto a cada una de las listas ´ A y B
+    b) Crear una lista C a partir de la mezcla de las listas A y B ya ordenadas.
+    c) Mostrar la lista C
  */
-public class punto9 {
+public class Punto9 {
     static final int MAX_VALOR = 57;
     static final int MIN_VALOR = 48;
    static final String NOMBRE_ARCHIVO_A ="src/ejemplos_InOut/entradaA.txt";
@@ -61,7 +66,7 @@ public class punto9 {
 
     	
         } catch (IOException ex) {
-            Logger.getLogger(punto9.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Punto9.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -120,7 +125,7 @@ public class punto9 {
             buffA.close();
             
         } catch (IOException ex) {
-            Logger.getLogger(punto9.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Punto9.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
     
@@ -149,7 +154,7 @@ public class punto9 {
             mostrarArreglo(c);
             
         } catch (IOException ex) {
-            Logger.getLogger(punto9.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Punto9.class.getName()).log(Level.SEVERE, null, ex);
         } 
    }
    

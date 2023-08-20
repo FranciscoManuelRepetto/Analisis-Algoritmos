@@ -1,4 +1,5 @@
 /*
+/*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -13,7 +14,9 @@ import java.io.IOException;
 
 /**
  *
- * @author Usuario
+ * PUNTO 1 EJERCICIO 2
+ * Con el mismo archivo de entrada, generar el archivo lineasImpares.txt con solo las l ´ ´ıneas
+impares del texto.
  */
 public class Ejercicio2 {
     public static void main(String[] args) {
@@ -23,43 +26,26 @@ public class Ejercicio2 {
          String linea = null;
          
          try {
-            /* FileReader es una clase que como indica el nombre, nos permite
-             * leer texto desde un archivo.
-             * https://docs.oracle.com/javase/7/docs/api/java/io/FileReader.html
-             */
             FileReader lectorArchivo = new FileReader(nombreArchivoEntrada);
-            /* De la misma manera, nos interesa poder escribir en un archivo, no
-             * solo por la salida estandar (consola).
-             * https://docs.oracle.com/javase/7/docs/api/java/io/FileWriter.html
-             */
+
             FileWriter escritorArchivo = new FileWriter(nombreArchivoSalida);
 
-            /* Si bien no es obligatorio, se recomienda fuertemente:
-             * Usar buffer para la entrada/salida de un archivo de texto
-             * Mejorar la performance de las operaciones de
-             * lectura y escritura, pero también es más robusto-
-             * https://docs.oracle.com/javase/7/docs/api/java/io/BufferedReader.html
-             * https://docs.oracle.com/javase/7/docs/api/java/io/BufferedWriter.html
-             */
             BufferedReader bufferLectura = new BufferedReader(lectorArchivo);
             BufferedWriter bufferEscritura = new BufferedWriter(escritorArchivo);
 
-            /* Mientras el buffer de lectura tenga algo por leer desde el archivo,
-             * imprimimos cada linea por pantalla y la grabamos tal cual en el archivo.
-             */
+
             int i = 1;
+            String salida = "";
             while ((linea = bufferLectura.readLine()) != null) {
                     if(i %2 != 0){
-                        bufferEscritura.write(linea+"\n");
+                       salida = salida +linea+"\n";
                     }
                     i++;
                 }
             
-
-             /* Para evitar que los archivos corran riesgo de quedar corruptos,
-             * es conveniente cerrarlos. Cerrando el buffer que envuelve un archivo
-             * este se ocupa de cerrar tambien su correspondiente archivo.
-             */
+            bufferEscritura.write( salida);
+            
+            
             bufferLectura.close();
             bufferEscritura.close();
         }
@@ -72,3 +58,4 @@ public class Ejercicio2 {
         }
     }
 }
+

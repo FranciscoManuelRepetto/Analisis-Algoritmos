@@ -13,7 +13,9 @@ import java.io.IOException;
 
 /**
  *
- * @author Usuario
+ * PUNTO 1 EJERCICIO 3
+ * Generar un archivo de texto que contenga 100 numeros reales (double o float) generados ´
+aleatoriamente con valores entre -100 y 100.
  */
 public class Ejercicio3 {
  static final int CANTNUMEROS = 100;
@@ -24,11 +26,13 @@ public class Ejercicio3 {
  private static void generarArchivo(){
         try{
             BufferedWriter buff = new BufferedWriter(new FileWriter(NOMBRE_ARCHIVO));
+            String salida = "";
             for (int i = 0; i < CANTNUMEROS ; i++){
                 int num = (int)(MIN_VALOR + (Math.random() * (MAX_VALOR-MIN_VALOR)));
-                buff.write( num +"\n");
+                salida = salida +num +"\n";
                 System.out.println(num);
             }
+             buff.write( salida);
             buff.close();
 
         }

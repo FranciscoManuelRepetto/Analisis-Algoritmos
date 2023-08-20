@@ -15,7 +15,9 @@ import java.io.IOException;
 
 /**
  *
- * @author Usuario
+ * PUNTO 1 EJERCICIO 4
+ * Generar un archivo de texto con cadenas aleatorias de 10 caracteres alfanumericos (0-9, a-z, ´
+A-Z).
  */
 public class Ejercicio4 {
 
@@ -28,6 +30,7 @@ public class Ejercicio4 {
             BufferedWriter buff = new BufferedWriter(escritorArchivo);
 
         int valoresRandom = 10;
+        String salida = "";
 
         for (int i = 0; i < valoresRandom; i++) {
             int valorRandom = 0;
@@ -44,8 +47,9 @@ public class Ejercicio4 {
             }
 
             char caracterAscii = (char) valorRandom;
-            buff.write(caracterAscii+"\n");
+           salida = salida +caracterAscii+"\n";
         }
+         buff.write(salida);
         buff.close();
      } catch (FileNotFoundException ex) {
             System.err.println(ex.getMessage() + "\nSignifica que el archivo del "
